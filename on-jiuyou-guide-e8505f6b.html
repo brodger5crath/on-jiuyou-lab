@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>九游 · 信息整理与索引笔记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f7f7f9;
+            color: #1e1e1e;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans', Roboto, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 720px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.8rem 2rem 3.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.02), 0 2px 8px rgba(0,0,0,0.03);
+            transition: padding 0.2s;
+        }
+        @media (max-width: 500px) {
+            .page {
+                padding: 2rem 1.2rem 2.8rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* 标题体系 — 清晰层级，极简留白 */
+        h1 {
+            font-weight: 450;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.35rem;
+            color: #111;
+            line-height: 1.2;
+        }
+        .subhead {
+            font-weight: 370;
+            font-size: 1rem;
+            color: #5c5c68;
+            margin-bottom: 2.8rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+        h2 {
+            font-weight: 420;
+            font-size: 1.3rem;
+            margin: 2.2rem 0 1rem 0;
+            color: #1c1c1c;
+            letter-spacing: -0.01em;
+            border-left: 3px solid #d0d0dc;
+            padding-left: 0.9rem;
+        }
+        h3 {
+            font-weight: 400;
+            font-size: 1.05rem;
+            margin: 1.6rem 0 0.5rem 0;
+            color: #252525;
+        }
+        p, li {
+            color: #2d2d30;
+            font-size: 0.98rem;
+            margin-bottom: 0.9rem;
+        }
+        p.quiet {
+            color: #6a6a74;
+            font-size: 0.93rem;
+        }
+
+        /* 卡片模块 — 浅底，弱边框，内容干净 */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.2rem 0 1rem;
+        }
+        .card {
+            flex: 1 1 180px;
+            background: #f4f4f6;
+            border-radius: 18px;
+            padding: 1.2rem 1.1rem 1.4rem;
+            transition: background 0.15s;
+        }
+        .card:hover {
+            background: #ededf0;
+        }
+        .card p {
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+            color: #2f2f36;
+        }
+        .card .card-label {
+            font-weight: 420;
+            font-size: 1rem;
+            letter-spacing: 0.01em;
+            color: #141414;
+            margin-bottom: 0.3rem;
+        }
+
+        /* 场景列表 / 特征点 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.8rem 0 1.2rem;
+        }
+        .feature-list li {
+            padding: 0.35rem 0 0.35rem 1.5rem;
+            position: relative;
+            margin-bottom: 0.2rem;
+        }
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.4rem;
+            color: #7e7e8c;
+            font-weight: 600;
+        }
+
+        .faq-block {
+            background: #f9f9fb;
+            border-radius: 18px;
+            padding: 1.2rem 1.5rem 1.4rem;
+            margin: 1.8rem 0 0.5rem;
+        }
+        .faq-block p:last-child {
+            margin-bottom: 0;
+        }
+        .faq-q {
+            font-weight: 430;
+            margin-bottom: 0.3rem;
+        }
+
+        /* 链接风格 — 干净、不突出 */
+        a {
+            color: #1f2b3c;
+            text-decoration: none;
+            border-bottom: 1px solid #cdd2db;
+            transition: border-color 0.1s;
+        }
+        a:hover {
+            border-bottom-color: #1f2b3c;
+        }
+
+        hr {
+            margin: 2.5rem 0 1.2rem;
+            border: none;
+            border-top: 1px solid #e7e7ec;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #7b7b88;
+            margin-top: 2.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>九游 · 信息索引</h1>
+    <div class="subhead">从资料整理到日常检索，一个安静的内容节点</div>
+
+    <p>
+        网站只是形式，内容才是落脚点。在整理网络信息的过程里，<a href="https://on-jiuyou.com.cn">九游</a>
+        被设计成一个偏向资料汇集与分类索引的页面：不追逐热点，不强调即时发布，而是把值得留存的信息按逻辑放置。
+    </p>
+    <p class="quiet">
+        这种定位更像一个半公开的笔记本——内容经过筛选，但保持克制的呈现，留给访问者自己判断。
+    </p>
+
+    <h2>用途 · 三类卡片</h2>
+    <div class="card-grid">
+        <div class="card">
+            <div class="card-label">📋 资料归档</div>
+            <p>定期将散落文章、工具链接和引用片段按主题归拢，减少信息失散。</p>
+        </div>
+        <div class="card">
+            <div class="card-label">🔗 实用索引</div>
+            <p>为常用文档、公共资源、操作手册建立简要入口，而非简单堆叠书签。</p>
+        </div>
+        <div class="card">
+            <div class="card-label">🧩 轻量笔记</div>
+            <p>以段落或列表呈现非结构化笔记，保留上下文，便于后续回顾与补充。</p>
+        </div>
+    </div>
+
+    <h2>适合哪些人</h2>
+    <ul class="feature-list">
+        <li>需要快速回顾某领域基础概念与原始链接的读者</li>
+        <li>习惯按主题而不是按时间浏览信息的使用者</li>
+        <li>偏好干净版式、无弹窗干扰的阅读环境</li>
+        <li>偶尔回来查找自己曾整理过的资料片段</li>
+    </ul>
+    <p>
+        当然，若你只是路过，也不妨把这儿当作一个普通的内容缓存点——没有推送，没有排名，
+        页面本身只是安静的文本和链接。
+    </p>
+
+    <h2>内容节奏与模块</h2>
+    <p>
+        目前的页面结构大致分为：<strong>概述</strong>、<strong>归档卡片</strong>、
+        <strong>适用场景</strong>以及不定期的<strong>问答片段</strong>。每个板块之间保持适度的留白，
+        标题用细边框区分层级，读起来更像一份文档而非营销落地页。
+    </p>
+    <p>
+        例如，对于某类工具或概念，页面可能会列出两三个关键参考链接，并附上简短使用条件；
+        对于流程类内容，则倾向于分步骤简述。这种整理方式受益于从一开始就不追求『大而全』，
+        而是跟随实际需要逐步叠加。
+    </p>
+
+    <h2>FAQ 摘要 · 常见疑问</h2>
+    <div class="faq-block">
+        <p class="faq-q">Q: 内容更新频率如何？</p>
+        <p>A: 不定期。取决于手头资料整理进度，有时一周集中补充几次，有时只是微调格式与链接有效性。</p>
+        <p class="faq-q" style="margin-top: 0.8rem;">Q: 我可以引用或转发这里的资料吗？</p>
+        <p>A: 大部分来源于公开信息或经过二次归纳，引用时建议回到原始出处；若是个人的笔记段落，请注明整理者。</p>
+        <p class="faq-q" style="margin-top: 0.8rem;">Q: 为什么叫九游？</p>
+        <p>A: 名字本身更接近一种符号，与资料整理中『游走于不同信息源』的状态恰好契合，没有额外的商业含义。</p>
+    </div>
+
+    <hr>
+    <p class="quiet" style="font-size: 0.9rem;">
+        如果你恰好也在寻找一种轻量的信息整理方式，不妨在需要的时候回到
+        <a href="https://on-jiuyou.com.cn">九游</a> 看看。
+        这里没有复杂的功能，只有经过选择的内容与干净的阅读线。
+    </p>
+    <div class="footer-note">
+        index 页 · 信息卡片式布局 &nbsp;·&nbsp; 最近更新 04 / 2025
+    </div>
+
+</div>
+</body>
+</html>
